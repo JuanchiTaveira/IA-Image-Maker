@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Urls {
+public class UnsplashUrls {
     private String raw;
     private String full;
     private String regular;

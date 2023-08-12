@@ -26,7 +26,7 @@ public class UnsplashImage {
     //private User user;
     @JsonProperty("current_user_collections")
     private List<String> currentUserCollections;
-    private Urls urls;
+    private UnsplashUrls urls;
     private UnsplashLinks links;
 }
 
