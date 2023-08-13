@@ -27,7 +27,7 @@ public class ViewController {
     @GetMapping("/view-image")
     public String viewImage(@RequestParam String prompt, Model model) throws IOException {
         String text = chatGPTService.generateChatResponse(prompt);
-        String imageUrl = unsplashService.getUnsplashImage(prompt).getUrls().getRegular();
+        String imageUrl = unsplashService.getUnsplashImage(prompt).getUrls().getSmall();
 
         byte[] imageWithText = imageTextService.generateImageWithText(text, imageUrl);
 

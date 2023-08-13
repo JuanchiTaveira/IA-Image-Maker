@@ -22,7 +22,9 @@ public class ImageTextService {
 
         Graphics2D graphics = image.createGraphics();
 
-        Font font = new Font("Arial", Font.BOLD, 60);
+        int fontSize = (int) (image.getHeight() * 0.05);
+
+        Font font = new Font("Montserrat", Font.BOLD, fontSize);
 
         graphics.setFont(font);
         graphics.setColor(textColor);
