@@ -27,9 +27,9 @@ public class ViewController {
     @GetMapping("/view-image")
     public String viewImage(@RequestParam String prompt, Model model) throws IOException {
         String text = chatGPTService.generateChatResponse(prompt);
-        String imageUrl = unsplashService.getUnsplashImage("fitness").getUrls().getSmall(); //TODO: revisar formas de poder obtener imagenes de mejor calidad (da error al imprimirla por la cantidad de bytes al transformarla, en forma de url no hay problema. Convertir la imagen en una url puede ser una opcion)
+        String imageUrl = unsplashService.getUnsplashImage(prompt).getUrls().getRegular();
 
-        byte[] imageWithText = imageTextService.generateImageWithText("fitness", imageUrl); //TODO: cambiar texto hardcoded
+        byte[] imageWithText = imageTextService.generateImageWithText(text, imageUrl);
 
         model.addAttribute("imageWithText", Base64.getEncoder().encodeToString(imageWithText));
 

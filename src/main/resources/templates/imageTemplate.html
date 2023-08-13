@@ -6,7 +6,6 @@
 </head>
 <body>
 <h1>Generated Image with Text</h1>
-<img th:src="${imageWithText}" alt="Generated Image">
-<img th:src="*{'data:image/png;base64,'+imageWithText}" alt="Otra imagen"/>
+<img src="data:image/jpeg;base64," th:attrappend="src=${imageWithText}" alt="Generated Image">
 </body>
 </html>

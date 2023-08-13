@@ -30,9 +30,11 @@ public class ChatGPTService {
         RestTemplate restTemplate = new RestTemplate();
 
         ChatGPTRequest request = new ChatGPTRequest();
-        request.setMessages(List.of(new ChatGPTMessage(prompt)));
+        request.setMessages(List.of(new ChatGPTMessage("Write one tip to upload to my instagram account about " + prompt + ". Do not use #hashtags.")));
         request.setModel(chatGPTModel);
-        request.setTemperature(0.7);
+        request.setTemperature(1.5);
+        request.setMaxTokens(150);
+        request.setTopP(1);
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "Bearer " + chatGPTApiKey);
