@@ -23,35 +23,11 @@ public class UnsplashImage {
     @JsonProperty("liked_by_user")
     private boolean likedByUser;
     private String description;
-    //private User user;
     @JsonProperty("current_user_collections")
     private List<String> currentUserCollections;
     private UnsplashUrls urls;
     private UnsplashLinks links;
 }
-
-/*public class User {
-    private String id;
-    private String username;
-    private String name;
-    private String first_name;
-    private String last_name;
-    private String instagram_username;
-    private String twitter_username;
-    private String portfolio_url;
-    private ProfileImage profile_image;
-    private Links links;
-
-    // Getters y setters
-}*/
-
-/*public class ProfileImage {
-    private String small;
-    private String medium;
-    private String large;
-
-    // Getters y setters
-}*/
 
 
 

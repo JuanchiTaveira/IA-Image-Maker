@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Image</title>
+</head>
+<body>
+<h1>Generated Image with Text</h1>
+<img th:src="${imageWithText}" alt="Generated Image">
+<img th:src="*{'data:image/png;base64,'+imageWithText}" alt="Otra imagen"/>
+</body>
+</html>
